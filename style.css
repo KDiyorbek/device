@@ -1,0 +1,49 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  margin: 10px;
+  padding: 0px;
+}
+
+h2 {
+  position: realtive;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(to right, green, #00ff7f, red, #cf23cf, #eedd44);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+}
+
+h4 {
+  color: #c2b280;
+}
+
+name {
+  color: orange;
+  font-weight: bold;
+}
+
+version {
+  color: #ffbf00;
+  font-weight: bold;
+}
+
+platform {
+  color: #cd7f32;
+  font-weight: bold;
+}
+
+agent {
+  color: #002e63;
+  font-weight: bold;
+}
+
+ip {
+  color: #882d17;
+  font-weight: bold;
+}
