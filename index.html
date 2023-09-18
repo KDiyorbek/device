@@ -28,7 +28,14 @@
   return browser;
 }
 </script>
-<script> 
+</head>
+<body>
+<h2># Device Information</h2> <hr>
+<h4>* you are using: <script>document.write(getBrowserName())</script> browser</h4>
+<p id="device"></p>
+<ip>your IP address:</ip>  <p id="gfg" style="text-align: center;"> getting IP address...<br>please, turn on GPS to get more accurately location</p>
+
+    <script> 
   var browserName = navigator.appName;
   var browserVersion = navigator.appVersion;
   var platform = navigator.platform;
@@ -36,12 +43,5 @@
   document.getElementById("device").innerHTML = "<name>Browser Name: </name> " + browserName + "<br><br>" + "<version>Browser Version: </version> " + browserVersion + "<br><br>" + "<platform>Platform:</platform> " + platform + "<br><br>" + "<agent>User Agent:</agent> " + userAgent; </script>
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
   <script> $.getJSON("https://api.ipify.org?format=json", function(data) { $("#gfg").html(data.ip); }) </script>
-</head>
-  
-<body>
-<h2># Device Information</h2> <hr>
-<h4>* you are using: <script>document.write(getBrowserName())</script> browser</h4>
-<p id="device"></p>
-<ip>your IP address:</ip>  <p id="gfg" style="text-align: center;"> getting IP address...<br>please, turn on GPS to get more accurately location</p>
 </body>
 </html>
