@@ -1,1 +1,1 @@
-# my-device
+# my-device info
