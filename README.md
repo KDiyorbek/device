@@ -1,1 +1,1 @@
-# it is device info of your phone/laptop/tablet
+# it is device info of your #phone/#laptop/#tablet
