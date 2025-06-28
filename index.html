@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="theme-color" content="black"/>
     <title>your device info</title>
     <link rel="stylesheet" href="style.css">
-<head>
-    <script>
-        function getBrowserName() {
-  var userAgent = navigator.userAgent;
-  var browser = "";
-  if (userAgent.indexOf("Chrome") > -1) {
-    browser = "Chrome";
-  } else if (userAgent.indexOf("Firefox") > -1) {
-    browser = "Firefox";
-  } else if (userAgent.indexOf("Safari") > -1) {
-    browser = "Safari";
-  } else if (userAgent.indexOf("Edge") > -1) {
-    browser = "Edge";
-  } else if (userAgent.indexOf("Chrome") > -1) {
-    browser = "Chrome";
-  } else if (userAgent.indexOf("Yandex") > -1) {
-    browser = "Yandex";
-  } else {
-    browser = "Unknown";
-  }
-  return browser;
-}
-</script>
+    <script src="java.js"></script>
 </head>
 <body>
-<h2># Device Information</h2> <hr>
-<h4>* you are using: <script>document.write(getBrowserName())</script> browser</h4> <br>
-<p id="device"></p> <br>
-<ip>your IP address:</ip>  <p id="gfg" style="text-align: center;"> getting IP address...<br>please, turn on GPS to get more accurately location</p>
+  <h2># Device Information</h2>
+  <hr>
+  <p class="bN">* you are using: <span id="browserName"></span> browser.</p>
+  <br>
+  <p id="device"></p>
+  <br>
+  <p id="ram-info">RAM loading...</p>
+  <br>
+  <ip>your IP address:</ip>  <p id="gfg" style="text-align: center;"> getting IP address...<br>please, turn on GPS to get more accurately location</p>
 
-    <script> 
-  var browserName = navigator.appName;
-  var browserVersion = navigator.appVersion;
-  var platform = navigator.platform;
-  var userAgent = navigator.userAgent;
-  document.getElementById("device").innerHTML = "<name>Browser Name: </name> " + browserName + "<br><br>" + "<version>Browser Version: </version> " + browserVersion + "<br><br>" + "<platform>Platform:</platform> " + platform + "<br><br>" + "<agent>User Agent:</agent> " + userAgent; </script>
+  <script>
+    function getBrowserName() {
+      var userAgent = navigator.userAgent;
+      var browser = "x";
+
+      if (userAgent.indexOf("Edge") > -1) {
+          browser = "Edge";
+      } else if (userAgent.indexOf("Yandex") > -1) {
+          browser = "Yandex";
+      } else if (userAgent.indexOf("Chrome") > -1) {
+          browser = "Chrome";
+      } else if (userAgent.indexOf("Firefox") > -1) {
+          browser = "Firefox";
+      } else if (userAgent.indexOf("Safari") > -1) {
+          browser = "Safari";
+      } else {
+          browser = "Unknown";
+      }
+        return browser;
+    }
+      var browserNameElement = document.getElementById("browserName");
+      browserNameElement.textContent = getBrowserName();
+  </script>
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
   <script> $.getJSON("https://api.ipify.org?format=json", function(data) { $("#gfg").html(data.ip); }) </script>
 </body>
