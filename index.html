@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="theme-color" content="black"/>
-    <title>your device info</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="java.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="theme-color" content="black"/>
+  <title>your device info</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="java.js"></script>
 </head>
 <body>
-  <h2># Device Information</h2>
-  <hr>
-  <p class="bN">* you are using: <span id="browserName"></span> browser.</p>
-  <br>
-  <p id="device"></p>
-  <br>
-  <p id="ram-info">RAM loading...</p>
-  <br>
-  <ip>your IP address:</ip>  <p id="gfg" style="text-align: center;"> getting IP address...<br>please, turn on GPS to get more accurately location</p>
-
+  <div class="ratio">
+    <h2># Device Information</h2>
+    <hr>
+    <p class="bN">* you are using: <span id="browserName"></span> browser.</p>
+    <p id="device"></p>
+    <ip>your IP address:</ip> <p id="gfg" style="text-align: center;">getting IP address...<br>please, turn on GPS to get more accurately location</p>
+  </div>
   <script>
     function getBrowserName() {
       var userAgent = navigator.userAgent;

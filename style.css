@@ -6,8 +6,15 @@
 body {
   position: absolute;
   width: 100%;
-  margin: 1px;
-  padding: 1px;
+  margin: 5px;
+  padding: 1;
+  user-select: none;
+  background-color: whitesmoke;
+}
+
+.ratio {
+  height: 100%;
+  width: 100%;
 }
 
 h2 {
@@ -23,7 +30,7 @@ h2 {
   color: #c2b280;
 }
 
-name, version, platform, agent, ip {
+langs, version, platform, agent, ram, storage, cores, touchs, pdf, vendor, ip {
   font-weight: bold;
   background: linear-gradient(to bottom, orange,#cd7f32, fuchsia);
   color: transparent;
