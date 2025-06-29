@@ -13,15 +13,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (deviceElement) {
         deviceElement.innerHTML =
-            "<langs>Languages: </langs>" + lang + "<br>" +
-            "<platform>Platform: </platform>" + platform + "<br>" +
-            "<version>Browser version: </version>" + browserVersion + "<br>" +
-            "<agent>User agent: </agent>" + userAgent + "<br>" +
-            "<ram>Device RAM: </ram>" + memory + " GB <br>" +
-            "<cores>Logical processor: </cores>" + core + " cores<br>" +
-            "<touchs>Multi-touch: </touchs>" + touch + "<br>" +
-            "<pdf>PDF reader: </pdf>" + pdf + "<br>" +
-            "<vendor>Vendor: </vendor>" + vendor + "<br>";
+            "<langs>Device/Keyboard languages: </langs>" + lang + "<br><br>" +
+            "<platform>Platform: </platform>" + platform + "<br><br>" +
+            "<agent>User agent: </agent>" + userAgent + "<br><br>" +
+            "<ram>Device RAM: </ram>" + memory + " GB <br><br>" +
+            "<cores>Logical processor: </cores>" + core + " cores<br><br>" +
+            "<touchs>Multi-touch: </touchs>" + touch + "<br><br>" +
+            "<pdf>PDF reader: </pdf>" + pdf + "<br><br>" +
+            "<vendor>Vendor: </vendor>" + vendor + "<br><br>";
     } else {
         console.error("Error: Element with id 'device' not found.");
     }
