@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.swirl {
+  --size: min(5vmin, 24px);
+  
+  position: relative;
+  
+  i {
+    --x: calc(rem((sibling-index() - 1), 20) - 9.5);
+    --y: calc(9.5 - round(down, (sibling-index() - 1) / 20));
+
+    --n: calc((sibling-index() - 1) / (sibling-count() - 1));
+    --hue: calc(mod(sin(var(--n) * 90deg) * 3600, 1) * 360);
+    
+    --distance: calc(sqrt(var(--x) * var(--x) + var(--y) * var(--y)) / sqrt(200));
+    --angle: calc(atan2(var(--x), var(--y)) / -360deg);
+    --delay: calc(var(--distance) * 9s + var(--angle) * 3s - 12s);
+
+    position: absolute;
+    inset: calc(var(--size) * -0.5);
+    background-color: hsl(var(--hue) 100% calc(80% - var(--distance) * 60%));
+    border-radius: 25%;
+    translate: calc(var(--x) * var(--size)) calc(var(--y) * var(--size));
+    animation: sqr 1.5s var(--delay, 0s) infinite ease-in-out alternate;
+  }
+}
+
+@keyframes sqr {
+  from { scale: 0; }
+  to { scale: 0.9; }
+}
